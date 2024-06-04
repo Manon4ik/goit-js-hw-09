@@ -17,11 +17,10 @@ const options = {
 
 flatpickr("#datetime-picker", options);
 
-const timerEl = document.querySelector(".timer")
-const timerDays = timerEl.querySelector('[data-days]');
-const timerHours = timerEl.querySelector('[data-hours]');
-const timerMinutes = timerEl.querySelector('[data-minutes]');
-const timerSeconds = timerEl.querySelector('[data-seconds]');
+const timerDays = document.querySelector('[data-days]');
+const timerHours = document.querySelector('[data-hours]');
+const timerMinutes = document.querySelector('[data-minutes]');
+const timerSeconds = document.querySelector('[data-seconds]');
 
 const startTimer = document.querySelector(".start-timer");
 let userDate = null;

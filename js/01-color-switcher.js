@@ -3,24 +3,21 @@ function getRandomHexColor() {
 }
 
 const wrapEl = document.querySelector('.wrap-for-action')
-const btnStart = document.querySelector('button[data-start]')
-const btnStop = document.querySelector('button[data-stop]')
+const btnStart = document.querySelector('.btn-start')
+const btnStop = document.querySelector('.btn-stop')
 let trimerId = null
 
-
-btnStart.addEventListener('click', function (event) {
-    console.log('click');
-    event.target.disabled =true;
-    console.log('event:', event.target);
+btnStart && btnStart.addEventListener('click', function (event) {
+    event.target.disabled = true;
 
     trimerId = setInterval(() => {
-        console.log('asd');
+
         wrapEl.style.backgroundColor = getRandomHexColor();
 
     }, 1000 );
 })
 
-btnStop.addEventListener('click', function (event) {
+btnStop && btnStop.addEventListener('click', function (event) {
     clearInterval(trimerId)
     btnStart.disabled = false
 })
